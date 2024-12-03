@@ -1,0 +1,182 @@
+{"intents": [
+        {
+          "tag": "greeting",
+          "patterns": ["Hi", "Is anyone there?", "Hello", "Good day"],
+          "responses": ["Hello, thanks for visiting", "Good to see you again", "Hi there, how can I help?"],
+          "login_required": false,
+          "context": ""
+        },
+        {
+          "tag": "goodbye",
+          "patterns": ["Bye", "See you later", "Goodbye"],
+          "responses": ["See you later, thanks for visiting", "Have a nice day", "Bye! Come back again soon."],
+          "login_required": false,
+          "context": ""
+        },
+        {
+          "tag": "pleasantries",
+          "patterns": ["How are you?", "How do you do?", "How are you doing today?", "Are you fine?", "Are you ok?", "How is your day?"],
+          "responses": ["I'm doing great! Thanks for asking. How about you?", "I'm fine, thank you. How about you?", "Yes, I am doing well. What about you?"],
+          "login_required": false,
+          "context": ""
+        },
+        {
+          "tag": "customer_pleasantry_happy",
+          "patterns": ["I'm fine", "I'm doing fine", "I'm ok", "I'm doing great", "Not too bad", "I'm alright", "I'm doing well", "Im good", "im fine"],
+          "responses": ["That's great to hear!", "Glad to hear!"],
+          "login_required": false,
+          "context": ""
+        },
+        {
+          "tag": "customer_pleasantry_sad",
+          "patterns": ["Not so great", "Not good", "It has been tough", "I'm having a bad day", "Not ok"],
+          "responses": ["I'm sorry to hear that. Hope you feel better.", "Hope your day gets better."],
+          "login_required": false,
+          "context": ""
+        },
+        {
+          "tag": "name",
+          "patterns": ["What is my name?", "Who am I?", "Do you know my name?"],
+          "responses": ["Your name is user_name", "You are logged in as user_name", "You are user_name"],
+          "login_required": true,
+          "context": ""
+        },
+        {
+          "tag": "thanks",
+          "patterns": ["Thanks", "Thank you", "That's helpful"],
+          "responses": ["Happy to help!", "Any time!", "My pleasure"],
+          "login_required": false,
+          "context": ""
+        },
+        {
+          "tag": "hours",
+          "patterns": ["What hours are you open?", "What are your hours?", "When are you open?", "Are you open today?",
+          "When do you open today?"],
+          "responses": ["We're open every day 9am-9pm", "Our hours are 9am-9pm every day"],
+          "login_required": false,
+          "context": ""
+        },
+        {
+          "tag": "payments",
+          "patterns": ["Do you take credit cards?", "Do you accept Mastercard?", "Are you cash only?" ],
+          "responses": ["We accept VISA, Mastercard and AMEX", "We accept most major credit cards"],
+          "login_required": false,
+          "context": ""
+        },
+        {
+          "tag": "selfintro",
+          "patterns": ["Who are you?", "What can you do?", "What are you?", "What are your uses?", "what is this about"],
+          "responses": ["I am Iris, an AI assistant commissioned by Forex INC. We specialise in providing easy forex cards for your travel needs! I can help you apply, withdraw or check the status of foreign exchange cards. I can also help answer FAQs like working hours and application process. I will try my best to help you. You can learn more about my functions by typing 'Learn More' or 'Help'" ],
+          "login_required": false,
+          "context": ""
+        },
+        {
+          "tag": "apply_card",
+          "patterns": ["I want to apply for a card", "Create a new application", "Start a new application", "New card", "Apply", "Apply card", "Apply for new card"],
+          "responses": ["Sure! I can help you with that! To continue, please mention if you would like to apply for a prepaid or postpaid card."],
+          "login_required": true,
+          "context": ""
+        },
+        {
+          "tag": "rejection_reasons",
+          "patterns": ["Why was my card rejected?", "Why was my application rejected?", "application rejection reason", "Rejection reasons"],
+          "responses": ["Rejections can happen due to a multitude of reasons including, bad credit score, outstanding debt, not enough recent credit activity and so on. Due to our privacy policy we cannot provide individual feedback on the chat. Please contact us on phone for more details"],
+          "login_required": false,
+          "context": ""
+        },
+        {
+          "tag": "registration_process",
+          "patterns": ["What is the application process?", "What happens after I apply?", "What is the time for processing?",
+            "Process Time", "How long does it take for an application?", "How long does an application take?", "What is the time period of an application", "Application process"],
+          "responses": ["Once you submit an application, we will perform a credit check and give you a result within a few minutes. In some cases, we might need additional information. If that is the case, you application status would be 'Pending' and we will contact you with 24 hours"],
+          "login_required": false,
+          "context": ""
+        },
+        {
+          "tag": "check_status",
+          "patterns": ["Check application status", "What's the status of my application?", "Track my application", "Status", "Get status"],
+          "response": ["I can do that for you.", "Let me get the status for all of your active applications"],
+          "login_required": true,
+          "context": ""
+        },
+        {
+          "tag": "postpaid",
+          "patterns": ["I want a post-paid card", "I'd like a post-paid card", "Apply for post-paid", "Post-paid card", "Postpaid"],
+          "responses": ["You are submitting a new application for a post-paid card. Do you want to continue?"],
+          "login_required": true,
+          "context": "postpaid"
+        },
+        {
+          "tag": "prepaid",
+          "patterns": ["I want a pre-paid card", "I'd like a pre-paid card", "Apply for pre-paid", "Pre-paid card", "Prepaid"],
+          "responses": ["You are submitting a new application for a pre-paid card. Do you want to continue?"],
+          "login_required": true,
+          "context": "prepaid"
+        },
+        {
+          "tag": "withdraw",
+          "patterns": ["Cancel my application", "Withdraw my application", "I want to cancel my application", "Cancel application", "Withdraw", "Cancel"],
+          "responses": ["I’m about to withdraw your application (if any). Is that okay?"],
+          "login_required": true,
+          "context": "withdraw"
+        },
+        {
+          "tag": "confirmation",
+          "patterns": ["yes", "y", "yea", "ya", "ok", "okay", "continue", "sure"],
+          "responses": ["Got it!"],
+          "login_required": false,
+          "context": ""
+        },
+        {
+          "tag": "decline",
+          "patterns": ["no", "n", "nah", "nope", "cancel", "stop"],
+          "responses": ["Current process cancelled by the user.", "You cancelled the process.", "Okay! I won't do it."],
+          "login_required": false,
+          "context": ""
+        },
+        {
+          "tag": "error",
+          "patterns": "",
+          "responses": ["I'm Sorry, I didn't get that.", "I didn't quite catch that. Please try to be more specific.",
+            "Apologies, I don't understand. Please type help if you ever feel stuck"],
+          "login_required": false,
+          "context": ""
+        },
+        {
+          "tag": "login",
+          "patterns": ["I want to login", "Login", "Logon", "Change user", "Switch user", "switch"],
+          "responses": "",
+          "login_required": false,
+          "context": ""
+        },
+        {
+          "tag": "logout",
+          "patterns": ["I want to logout", "I want to logoff", "logout", "logoff"],
+          "responses": ["Are you sure you want to logout?"],
+          "login_required": true,
+          "context": "logout"
+        },
+        {
+          "tag": "register",
+          "patterns": ["Create new user", "New user", "Register", "Register user", "Create user", "Create account",
+            "New account", "Account"],
+          "responses": ["I can help you create a new account", "I can help register an account"],
+          "login_required": false,
+          "context": ""
+        },
+        {
+          "tag": "delete_account",
+          "patterns": ["Delete account", "Remove account", "Deactivate account", "Close account"],
+          "responses": ["You are about to delete your account. This action cannot be undone. Once your account is deleted, you would have to call us if you want to withdraw any active applications. Are you sure you want to proceed?"],
+          "login_required": true,
+          "context": "delete_account"
+        },
+        {
+          "tag": "how_to",
+          "patterns": ["More", "Learn More", "How do I do that?", "How do I do this?", "Can I do that?", "Can I do this?", "How do I", "Can I", "How", "How can I apply for cards", "How to withdraw an application", "How to create user", "What can I do?", "Help", "I need help", "I am stuck", "How do I login" ],
+          "responses": ["You can use simple text to let me know what you would like to do. For example, if you would like to login, you can simply type 'login'. List of actions I can perform: Applications: 1) Apply for new card 2) Check status 3) Withdraw application | User Actions: 1) Login 2) Logout 3) Register 4) Deactivate | Others: 1) Hours 2) Payment methods 3) Application process 4) Reason for rejection" ],
+          "login_required": false,
+          "context": ""
+        }
+    ]
+}
